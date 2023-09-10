@@ -3,7 +3,7 @@ syntax = "proto3"; // Using proto3 syntax.
 
 package movieapi; // Package name for generated code.
 
-option go_package = "github.com/junkd0g/go-api-example/schema"; 
+option go_package = "movieapi"; // Go package name for generated code.
 
 // Request message for fetching a movie by its title.
 message MovieRequest {
