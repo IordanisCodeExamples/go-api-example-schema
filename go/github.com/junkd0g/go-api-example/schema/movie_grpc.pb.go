@@ -6,7 +6,7 @@
 // - protoc             v3.21.9
 // source: movie.proto
 
-package _go
+package schema
 
 import (
 	context "context"
