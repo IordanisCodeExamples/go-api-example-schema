@@ -1,0 +1,26 @@
+// movie.proto
+syntax = "proto3"; // Using proto3 syntax.
+
+package movieapi; // Package name for generated code.
+
+option go_package = "github.com/yourusername/go-api-example-schema/go"; 
+
+// Request message for fetching a movie by its title.
+message MovieRequest {
+    string title = 1; // The title of the movie to fetch.
+}
+
+// Response message containing movie details.
+message MovieResponse {
+    string title = 1; // The title of the movie.
+    string description = 2; // A brief description or plot summary of the movie.
+    float rating = 3; // The movie's rating (e.g., out of 10).
+    int32 year = 4; // The year the movie was released.
+    string director = 5; // The director of the movie.
+}
+
+// Service definition for movie operations.
+service MovieService {
+    // RPC method to fetch a movie by its title.
+    rpc GetMovie(MovieRequest) returns (MovieResponse);
+}
